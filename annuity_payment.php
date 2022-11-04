@@ -1,6 +1,6 @@
 <?php
 
-function credit($S, $P, $N)
+function credit(float $S, float $P, float $N): array
 {
     $P /= 1200;
     $N *= 12;
