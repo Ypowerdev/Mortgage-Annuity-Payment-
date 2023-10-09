@@ -49,9 +49,8 @@ class AnnuityPayment
     }
     
     public function getForm(): string 
-    { 
-                
-        $form = '
+    {                     
+        $form = '';
         <form method="POST">
         <div class="row">
             <p>Сумма кредита:<br> <input type="number" name="creditSum" value="'. self::INIT_NUMBER . '"></p>
@@ -92,8 +91,7 @@ class AnnuityPayment
        echo 'Годовая процентная ставка: ' . $this->annualPercentageRate . ' процентов' . '<br>'; 
        echo 'Срок кредитования: ' . $this->creditForYears . ' лет' . '<br>'; 
        echo 'Ежемесячный платёж: ' . round ($this->getAnnPayment(), 2) . ' рублей' . '<br>'; 
-       echo 'Переплата: ' . round ($this->getOverpaymentInfo(), 2) . ' рублей' . '<br>'; 
-            
+       echo 'Переплата: ' . round ($this->getOverpaymentInfo(), 2) . ' рублей' . '<br>';             
     }
     
     public function printAllCreditInfoHTML(): string 
@@ -106,8 +104,7 @@ class AnnuityPayment
             <p>Ежемесячный платёж: ' . round ($this->getAnnPayment(), 2) .  ' рублей </p> 
             <p>Переплата: ' . round ($this->getOverpaymentInfo(), 2) . ' рублей </p>';  
                     
-        return $allCreditInfo; 
-        
+        return $allCreditInfo;         
     }
 }
 
